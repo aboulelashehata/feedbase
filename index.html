@@ -10,6 +10,10 @@
         box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -117,29 +121,57 @@
         font-size: 16px;
     }
 
-    .screen-section {
+    .workflow-section {
         padding: 70px 20px;
-        text-align: center;
     }
 
-    .screen-section h2 {
-        font-size: 38px;
+    .workflow-section h2 {
+        text-align: center;
+        font-size: 40px;
         margin-bottom: 18px;
     }
 
-    .screen-section p {
+    .workflow-section .lead {
+        text-align: center;
         max-width: 900px;
-        margin: 0 auto 28px;
+        margin: 0 auto 40px;
         color: #d6deea;
         font-size: 18px;
     }
 
-    .screen-image {
+    .demo {
+        margin-top: 55px;
+        text-align: center;
+    }
+
+    .demo:first-of-type {
+        margin-top: 30px;
+    }
+
+    .demo img {
         width: 100%;
-        max-width: 1100px;
+        max-width: 1050px;
         border-radius: 14px;
+        margin-bottom: 22px;
         box-shadow: 0 0 24px rgba(0, 0, 0, 0.28);
         border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .demo-text {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .demo-text h3 {
+        margin-bottom: 10px;
+        color: #22c55e;
+        font-size: 28px;
+    }
+
+    .demo-text p {
+        color: #d6deea;
+        font-size: 18px;
+        margin: 0 auto;
     }
 
     .video-box {
@@ -149,6 +181,7 @@
         max-width: 900px;
         margin: 30px auto 0;
         box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+        text-align: center;
     }
 
     .video-box p {
@@ -191,9 +224,13 @@
         }
 
         .section h2,
-        .screen-section h2,
+        .workflow-section h2,
         .cta-section h2 {
             font-size: 30px;
+        }
+
+        .demo-text h3 {
+            font-size: 24px;
         }
 
         .btn {
@@ -225,7 +262,7 @@
             <h2>What is FeedBase?</h2>
             <p class="lead">
                 FeedBase helps nutritionists, feed engineers, and farm managers create optimized feed formulas,
-                manage ingredients, calculate feed cost, and analyze nutrients in one powerful and practical system.
+                manage ingredients, calculate feed cost, analyze nutrients, and track previous solutions in one practical system.
             </p>
         </div>
     </div>
@@ -237,48 +274,122 @@
             <div class="features">
                 <div class="card">
                     <h3>Ingredient Management</h3>
-                    <p>Organize raw materials, control inclusion limits, and manage ingredient prices with clarity and flexibility.</p>
+                    <p>Organize raw materials, manage prices, and keep your ingredient database updated and ready for formulation.</p>
                 </div>
 
                 <div class="card">
                     <h3>Nutrient Analysis</h3>
-                    <p>Compare actual versus standard nutrient values instantly and monitor formulation quality in real time.</p>
+                    <p>Compare actual versus target nutrient values instantly and monitor formulation accuracy in real time.</p>
                 </div>
 
                 <div class="card">
                     <h3>Cost Optimization</h3>
-                    <p>Reduce feed cost using solver-based optimization while keeping your nutritional targets under control.</p>
+                    <p>Use the built-in solver to reduce feed cost while maintaining nutritional standards and formula quality.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Fast Formulation</h3>
-                    <p>Create feed formulas quickly with a simple interface designed for practical daily use.</p>
+                    <h3>Formula History</h3>
+                    <p>Save, compare, and restore previous formulations to continue work faster and make better production decisions.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="screen-section">
+    <div class="workflow-section">
         <div class="container">
-            <h2>Main Interface</h2>
-            <p>
-                FeedBase provides a clear interface to select poultry type, feed type, feed days, and solver mode,
-                while giving full visibility over ingredient data and nutritional analysis.
+            <h2>Powerful Feed Optimization System</h2>
+            <p class="lead">
+                FeedBase is built as a complete workflow, from selecting the feed program and ingredients,
+                to optimization, nutrient targeting, report history, and formula restoration.
             </p>
 
-            <img src="images/main-screen.png" alt="FeedBase Main Interface" class="screen-image">
-        </div>
-    </div>
+            <div class="demo">
+                <img src="images/main-screen.png" alt="FeedBase Main Screen">
+                <div class="demo-text">
+                    <h3>Main Formulation Screen</h3>
+                    <p>
+                        The main interface allows you to select poultry type, feed type, feed days, and solver mode,
+                        while monitoring ingredients, prices, limits, nutrient standards, and overall formula cost in one place.
+                    </p>
+                </div>
+            </div>
 
-    <div class="screen-section">
-        <div class="container">
-            <h2>Advanced Analysis & Solver</h2>
-            <p>
-                Monitor nutrient targets, compare actual values against standards, and optimize the formula using the built-in solver engine
-                to achieve better performance at lower cost.
-            </p>
+            <div class="demo">
+                <img src="images/solver-screen.png" alt="FeedBase Solver Screen">
+                <div class="demo-text">
+                    <h3>Optimization Solver</h3>
+                    <p>
+                        Run advanced optimization using Solver to generate the lowest-cost feed formula
+                        while meeting nutritional requirements automatically and efficiently.
+                    </p>
+                </div>
+            </div>
 
-            <img src="images/solver-screen.png" alt="FeedBase Solver Screen" class="screen-image">
+            <div class="demo">
+                <img src="images/tables-feedmap.png" alt="FeedMap Table">
+                <div class="demo-text">
+                    <h3>Feed Program Mapping</h3>
+                    <p>
+                        Define feed programs for multiple animal types and production stages,
+                        making it easy to switch between starter, grower, finisher, and other feed plans.
+                    </p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-ingredients.png" alt="Ingredients Table">
+                <div class="demo-text">
+                    <h3>Ingredient Database</h3>
+                    <p>
+                        Maintain a complete ingredient database with nutritional values, price data,
+                        and raw material details required for accurate formulation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-mixdefaults.png" alt="Mix Defaults Table">
+                <div class="demo-text">
+                    <h3>Mix Constraints</h3>
+                    <p>
+                        Control minimum and maximum inclusion rates for each ingredient,
+                        helping you keep formulations realistic, safe, and production-ready.
+                    </p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-solverreports.png" alt="Solver Reports Table">
+                <div class="demo-text">
+                    <h3>Solver Reports Archive</h3>
+                    <p>
+                        Store solver results and review previous optimization runs,
+                        including cost, status, timing, and saved formula data for later use.
+                    </p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-specs.png" alt="Specs Table">
+                <div class="demo-text">
+                    <h3>Nutrient Specifications</h3>
+                    <p>
+                        Define target nutrient values for each animal type and stage,
+                        ensuring every formula is evaluated against the correct nutritional standards.
+                    </p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/comparison-screen.png" alt="Comparison and Restore Screen">
+                <div class="demo-text">
+                    <h3>Formula Comparison & Restore</h3>
+                    <p>
+                        Advanced comparison tools allow you to review previous feed formulas,
+                        compare cost and status, and restore any saved formulation with one click.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -286,8 +397,8 @@
         <div class="container">
             <h2>Demo Video</h2>
             <p class="lead">
-                A short video tutorial will be added here to show how to install FeedBase,
-                create a formula, and use the solver step by step.
+                A step-by-step video tutorial will be added here to show how to install FeedBase,
+                build a formula, run the solver, and restore previous reports.
             </p>
 
             <div class="video-box">
@@ -300,7 +411,8 @@
         <div class="container">
             <h2>Start Using FeedBase Today</h2>
             <p>
-                Download the current version and start building optimized feed formulas with speed, clarity, and better cost control.
+                Download the current version and start building optimized feed formulas
+                with better speed, better visibility, and better cost control.
             </p>
 
             <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
