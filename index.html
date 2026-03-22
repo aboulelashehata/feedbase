@@ -14,147 +14,284 @@
         scroll-behavior: smooth;
     }
 
+    :root {
+        --bg: #081225;
+        --bg2: #0f172a;
+        --card: #1e293b;
+        --card2: #23324a;
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --soft: #94a3b8;
+        --accent: #22c55e;
+        --accent-dark: #16a34a;
+        --border: rgba(255,255,255,0.08);
+        --shadow: 0 12px 30px rgba(0,0,0,0.28);
+    }
+
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: white;
-        line-height: 1.6;
+        background: linear-gradient(180deg, #081225 0%, #0b1730 40%, #081225 100%);
+        color: var(--text);
+        line-height: 1.65;
     }
 
     .container {
         width: 90%;
-        max-width: 1150px;
+        max-width: 1180px;
         margin: auto;
+    }
+
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(8px);
+        background: rgba(8, 18, 37, 0.78);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 16px 0;
+    }
+
+    .brand {
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: white;
+    }
+
+    .nav-btn {
+        background: var(--accent);
+        color: #08111f !important;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-weight: bold;
     }
 
     .hero {
         text-align: center;
-        padding: 90px 20px 70px;
+        padding: 95px 20px 70px;
     }
 
     .hero h1 {
-        font-size: 56px;
-        margin-bottom: 10px;
+        font-size: 68px;
+        margin: 0 0 14px;
+        line-height: 1.05;
     }
 
     .hero .subtitle {
-        font-size: 22px;
-        color: #dbe4f0;
-        margin-bottom: 10px;
+        font-size: 26px;
+        color: #e2e8f0;
+        margin-bottom: 12px;
     }
 
     .hero .highlight {
-        margin-top: 10px;
-        color: #22c55e;
+        margin: 8px auto 0;
+        color: var(--accent);
         font-weight: bold;
-        font-size: 18px;
+        font-size: 22px;
+        max-width: 900px;
+    }
+
+    .hero .hero-text {
+        max-width: 850px;
+        margin: 22px auto 0;
+        color: var(--muted);
+        font-size: 19px;
+    }
+
+    .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
     }
 
     .btn {
         display: inline-block;
-        margin-top: 22px;
-        padding: 16px 34px;
-        background: #22c55e;
+        padding: 18px 40px;
+        background: var(--accent);
         color: #08111f;
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 12px;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 20px;
         transition: 0.2s ease;
+        box-shadow: 0 8px 22px rgba(34,197,94,0.28);
     }
 
     .btn:hover {
-        opacity: 0.92;
-        transform: translateY(-1px);
+        opacity: 0.95;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        padding: 18px 30px;
+        background: transparent;
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        border: 1px solid var(--border);
+        transition: 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255,255,255,0.04);
+        transform: translateY(-2px);
     }
 
     .download-note {
-        margin-top: 12px;
-        color: #94a3b8;
+        margin-top: 14px;
+        color: var(--soft);
         font-size: 17px;
     }
 
+    .hero-stat-row {
+        margin-top: 36px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        gap: 18px;
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stat-card {
+        background: rgba(30,41,59,0.7);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px 16px;
+        box-shadow: var(--shadow);
+    }
+
+    .stat-card h3 {
+        margin: 0;
+        color: var(--accent);
+        font-size: 30px;
+    }
+
+    .stat-card p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+    }
+
     .section {
-        padding: 65px 20px;
+        padding: 55px 20px;
+    }
+
+    .section-alt {
+        background: rgba(255,255,255,0.015);
+        border-top: 1px solid rgba(255,255,255,0.03);
+        border-bottom: 1px solid rgba(255,255,255,0.03);
     }
 
     .section h2 {
         text-align: center;
-        margin-bottom: 20px;
-        font-size: 38px;
+        margin: 0 0 18px;
+        font-size: 44px;
     }
 
     .section p.lead {
         text-align: center;
-        max-width: 850px;
-        margin: 0 auto 30px;
-        color: #d6deea;
-        font-size: 18px;
+        max-width: 920px;
+        margin: 0 auto 32px;
+        color: var(--muted);
+        font-size: 19px;
     }
 
     .features {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 22px;
-        margin-top: 35px;
+        gap: 24px;
+        margin-top: 32px;
     }
 
     .card {
-        background: #1e293b;
-        padding: 24px;
-        border-radius: 14px;
-        box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
-        text-align: left;
+        background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+        padding: 26px;
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        transition: 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
     }
 
     .card h3 {
-        margin-top: 0;
-        margin-bottom: 12px;
+        margin: 0 0 12px;
         color: #ffffff;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .card p {
         margin: 0;
-        color: #d5deea;
-        font-size: 16px;
+        color: var(--muted);
+        font-size: 17px;
     }
 
     .workflow-section {
-        padding: 70px 20px;
+        padding: 60px 20px 70px;
     }
 
     .workflow-section h2 {
         text-align: center;
-        font-size: 40px;
-        margin-bottom: 18px;
+        font-size: 50px;
+        margin: 0 0 16px;
     }
 
     .workflow-section .lead {
         text-align: center;
-        max-width: 900px;
-        margin: 0 auto 40px;
-        color: #d6deea;
-        font-size: 18px;
+        max-width: 980px;
+        margin: 0 auto 38px;
+        color: var(--muted);
+        font-size: 19px;
     }
 
     .demo {
-        margin-top: 55px;
+        margin-top: 56px;
         text-align: center;
-    }
-
-    .demo:first-of-type {
-        margin-top: 30px;
     }
 
     .demo img {
         width: 100%;
-        max-width: 1050px;
-        border-radius: 14px;
+        max-width: 1000px;
+        border-radius: 18px;
         margin-bottom: 22px;
-        box-shadow: 0 0 24px rgba(0, 0, 0, 0.28);
-        border: 1px solid rgba(255,255,255,0.06);
+        border: 2px solid #1f2937;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background: #0b1324;
     }
 
     .demo-text {
@@ -163,31 +300,32 @@
     }
 
     .demo-text h3 {
-        margin-bottom: 10px;
-        color: #22c55e;
-        font-size: 28px;
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 30px;
     }
 
     .demo-text p {
-        color: #d6deea;
+        margin: 0;
+        color: var(--muted);
         font-size: 18px;
-        margin: 0 auto;
     }
 
     .video-box {
-        background: #1e293b;
-        border-radius: 14px;
-        padding: 35px 20px;
-        max-width: 900px;
-        margin: 30px auto 0;
-        box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+        background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        padding: 42px 24px;
+        max-width: 920px;
+        margin: 28px auto 0;
+        box-shadow: var(--shadow);
         text-align: center;
     }
 
     .video-box p {
         margin: 0;
-        color: #d6deea;
-        font-size: 18px;
+        color: var(--muted);
+        font-size: 20px;
     }
 
     .cta-section {
@@ -195,47 +333,103 @@
         padding: 70px 20px 80px;
     }
 
+    .cta-box {
+        max-width: 980px;
+        margin: auto;
+        background: linear-gradient(180deg, rgba(30,41,59,0.75), rgba(35,50,74,0.75));
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 55px 28px;
+    }
+
     .cta-section h2 {
-        font-size: 38px;
-        margin-bottom: 14px;
+        font-size: 52px;
+        margin: 0 0 16px;
     }
 
     .cta-section p {
         max-width: 760px;
-        margin: 0 auto 10px;
-        color: #d6deea;
-        font-size: 18px;
+        margin: 0 auto 12px;
+        color: var(--muted);
+        font-size: 21px;
     }
 
     .footer {
         text-align: center;
-        padding: 30px 20px 40px;
-        color: #94a3b8;
+        padding: 26px 20px 40px;
+        color: var(--soft);
         font-size: 15px;
     }
 
-    @media (max-width: 768px) {
+    .footer p {
+        margin: 8px 0;
+    }
+
+    @media (max-width: 900px) {
         .hero h1 {
-            font-size: 40px;
+            font-size: 50px;
+        }
+
+        .hero .subtitle {
+            font-size: 22px;
+        }
+
+        .hero .highlight {
+            font-size: 20px;
+        }
+
+        .hero-stat-row {
+            grid-template-columns: 1fr;
+        }
+
+        .workflow-section h2,
+        .section h2,
+        .cta-section h2 {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links {
+            gap: 14px;
+        }
+
+        .hero {
+            padding-top: 72px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
         }
 
         .hero .subtitle {
             font-size: 18px;
         }
 
-        .section h2,
-        .workflow-section h2,
-        .cta-section h2 {
-            font-size: 30px;
+        .hero .highlight,
+        .hero .hero-text,
+        .section p.lead,
+        .workflow-section .lead,
+        .demo-text p,
+        .cta-section p,
+        .video-box p {
+            font-size: 17px;
         }
 
         .demo-text h3 {
             font-size: 24px;
         }
 
-        .btn {
-            font-size: 16px;
-            padding: 14px 26px;
+        .btn,
+        .btn-secondary {
+            width: 100%;
+            text-align: center;
         }
     }
 </style>
@@ -243,31 +437,99 @@
 
 <body>
 
-    <div class="hero">
-        <div class="container">
-            <h1>FeedBase</h1>
-            <p class="subtitle">Professional Feed Formulation Software</p>
-            <p class="highlight">Reduce feed cost. Improve formulation accuracy. Save time.</p>
+    <div class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="brand">FeedBase</a>
 
-            <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
-                Download Now
-            </a>
-
-            <p class="download-note">Free Trial Available • Windows 10/11 • v1.0</p>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#video">Demo</a>
+                <a href="#download" class="nav-btn">Download</a>
+            </div>
         </div>
     </div>
 
-    <div class="section">
+    <div class="hero">
+        <div class="container">
+            <h1>FeedBase</h1>
+            <p class="subtitle">Smart Feed Formulation & Cost Optimization Software</p>
+            <p class="highlight">Reduce feed cost. Improve formulation accuracy. Save time.</p>
+            <p class="hero-text">
+                FeedBase helps nutritionists, feed engineers, and farm managers build optimized feed formulas,
+                manage ingredients, control nutrient targets, and restore previous solutions from one complete system.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
+                    Download Now
+                </a>
+
+                <a class="btn-secondary" href="#workflow">
+                    Explore Workflow
+                </a>
+            </div>
+
+            <p class="download-note">Free Trial Available • Windows 10/11 • v1.0</p>
+
+            <div class="hero-stat-row">
+                <div class="stat-card">
+                    <h3>Fast</h3>
+                    <p>Build and optimize feed formulas in a practical workflow.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accurate</h3>
+                    <p>Compare actual nutrient values against target standards instantly.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Practical</h3>
+                    <p>Save, compare, and restore old solutions when needed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="about">
         <div class="container">
             <h2>What is FeedBase?</h2>
             <p class="lead">
-                FeedBase helps nutritionists, feed engineers, and farm managers create optimized feed formulas,
-                manage ingredients, calculate feed cost, analyze nutrients, and track previous solutions in one practical system.
+                FeedBase is a complete feed formulation platform that combines ingredient management,
+                nutrient specifications, solver-based cost optimization, report history, and formula restoration
+                in one professional desktop application.
             </p>
         </div>
     </div>
 
-    <div class="section">
+    <div class="section section-alt">
+        <div class="container">
+            <h2>Why FeedBase?</h2>
+
+            <div class="features">
+                <div class="card">
+                    <h3>💰 Reduce Cost</h3>
+                    <p>Minimize feed cost using intelligent optimization and clear ingredient constraints.</p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Save Time</h3>
+                    <p>Replace manual calculations and trial-and-error formulation with a structured workflow.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📊 Accurate Results</h3>
+                    <p>Monitor standards versus actual values and keep every formula aligned with target nutrition.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🗂 Formula History</h3>
+                    <p>Review previous solutions, compare reports, and restore any old formulation with one click.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="features">
         <div class="container">
             <h2>Key Features</h2>
 
@@ -295,9 +557,9 @@
         </div>
     </div>
 
-    <div class="workflow-section">
+    <div class="workflow-section section-alt" id="workflow">
         <div class="container">
-            <h2>Powerful Feed Optimization System</h2>
+            <h2>Complete Feed Formulation Workflow</h2>
             <p class="lead">
                 FeedBase is built as a complete workflow, from selecting the feed program and ingredients,
                 to optimization, nutrient targeting, report history, and formula restoration.
@@ -309,7 +571,7 @@
                     <h3>Main Formulation Screen</h3>
                     <p>
                         The main interface allows you to select poultry type, feed type, feed days, and solver mode,
-                        while monitoring ingredients, prices, limits, nutrient standards, and overall formula cost in one place.
+                        while monitoring ingredients, prices, limits, nutrient standards, and total cost in one place.
                     </p>
                 </div>
             </div>
@@ -341,7 +603,7 @@
                 <div class="demo-text">
                     <h3>Ingredient Database</h3>
                     <p>
-                        Maintain a complete ingredient database with nutritional values, price data,
+                        Maintain a complete ingredient database with nutritional values, pricing data,
                         and raw material details required for accurate formulation.
                     </p>
                 </div>
@@ -393,37 +655,40 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="video">
         <div class="container">
             <h2>Demo Video</h2>
             <p class="lead">
-                A step-by-step video tutorial will be added here to show how to install FeedBase,
-                build a formula, run the solver, and restore previous reports.
+                A full demo video will be added here to show how to install FeedBase,
+                build a formula, run the solver, and restore previous reports step by step.
             </p>
 
             <div class="video-box">
-                <p>Video section coming soon.</p>
+                <p>Full demo video coming soon.</p>
             </div>
         </div>
     </div>
 
-    <div class="cta-section">
+    <div class="cta-section" id="download">
         <div class="container">
-            <h2>Start Using FeedBase Today</h2>
-            <p>
-                Download the current version and start building optimized feed formulas
-                with better speed, better visibility, and better cost control.
-            </p>
+            <div class="cta-box">
+                <h2>Start Using FeedBase Today</h2>
+                <p>
+                    Download the current version and start building optimized feed formulas
+                    with better speed, better visibility, and better cost control.
+                </p>
 
-            <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
-                Download FeedBase
-            </a>
+                <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
+                    Download FeedBase
+                </a>
 
-            <p class="download-note">If Windows shows a warning, click “More info” then “Run anyway”.</p>
+                <p class="download-note">If Windows shows a warning, click “More info” then “Run anyway”.</p>
+            </div>
         </div>
     </div>
 
     <div class="footer">
+        <p>FeedBase © 2026</p>
         <p>Developed by Eng. Aboulela</p>
     </div>
 
