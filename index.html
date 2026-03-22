@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,136 +6,314 @@
 <title>FeedBase</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        line-height: 1.6;
+    }
 
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
+    .container {
+        width: 90%;
+        max-width: 1150px;
+        margin: auto;
+    }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
+    .hero {
+        text-align: center;
+        padding: 90px 20px 70px;
+    }
 
-.hero p {
-    font-size: 18px;
-    color: #cbd5e1;
-}
+    .hero h1 {
+        font-size: 56px;
+        margin-bottom: 10px;
+    }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #22c55e;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
+    .hero .subtitle {
+        font-size: 22px;
+        color: #dbe4f0;
+        margin-bottom: 10px;
+    }
 
+    .hero .highlight {
+        margin-top: 10px;
+        color: #22c55e;
+        font-weight: bold;
+        font-size: 18px;
+    }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+    .btn {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 16px 34px;
+        background: #22c55e;
+        color: #08111f;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.2s ease;
+    }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+    .btn:hover {
+        opacity: 0.92;
+        transform: translateY(-1px);
+    }
 
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-}
+    .download-note {
+        margin-top: 12px;
+        color: #94a3b8;
+        font-size: 17px;
+    }
 
-.footer {
-    text-align: center;
-    padding: 30px;
-    color: #94a3b8;
-}
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 38px;
+    }
+
+    .section p.lead {
+        text-align: center;
+        max-width: 850px;
+        margin: 0 auto 30px;
+        color: #d6deea;
+        font-size: 18px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 35px;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 24px;
+        border-radius: 14px;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+        text-align: left;
+    }
+
+    .card h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        color: #ffffff;
+        font-size: 22px;
+    }
+
+    .card p {
+        margin: 0;
+        color: #d5deea;
+        font-size: 16px;
+    }
+
+    .screen-section {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .screen-section h2 {
+        font-size: 38px;
+        margin-bottom: 18px;
+    }
+
+    .screen-section p {
+        max-width: 900px;
+        margin: 0 auto 28px;
+        color: #d6deea;
+        font-size: 18px;
+    }
+
+    .screen-image {
+        width: 100%;
+        max-width: 1100px;
+        border-radius: 14px;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .video-box {
+        background: #1e293b;
+        border-radius: 14px;
+        padding: 35px 20px;
+        max-width: 900px;
+        margin: 30px auto 0;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .video-box p {
+        margin: 0;
+        color: #d6deea;
+        font-size: 18px;
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 70px 20px 80px;
+    }
+
+    .cta-section h2 {
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+
+    .cta-section p {
+        max-width: 760px;
+        margin: 0 auto 10px;
+        color: #d6deea;
+        font-size: 18px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 30px 20px 40px;
+        color: #94a3b8;
+        font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+        }
+
+        .section h2,
+        .screen-section h2,
+        .cta-section h2 {
+            font-size: 30px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 14px 26px;
+        }
+    }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>FeedBase</h1>
-    <p>Professional Feed Formulation Software</p>
-    <p style="margin-top:10px; color:#22c55e; font-weight:bold;">
-Reduce feed cost. Improve formulation accuracy. Save time.
-</p>
-   <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe">
-    Download Now
-</a>
-    <p style="margin-top:10px; color:#94a3b8;">
-Free Trial Available • Windows 10/11 • v1.0
-</p>
-</div>
+    <div class="hero">
+        <div class="container">
+            <h1>FeedBase</h1>
+            <p class="subtitle">Professional Feed Formulation Software</p>
+            <p class="highlight">Reduce feed cost. Improve formulation accuracy. Save time.</p>
 
-<div class="section">
-    <div class="container">
-        <h2>What is FeedBase?</h2>
-        <p style="text-align:center;">
-            FeedBase helps nutritionists and feed engineers create optimized feed formulas,
-            manage ingredients, calculate costs, and analyze nutrients in one powerful system.
-        </p>
-    </div>
-</div>
+            <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
+                Download Now
+            </a>
 
-<div class="section">
-    <div class="container">
-        <h2>Features</h2>
-        <div class="features">
-
-            <div class="card">
-                <h3>Ingredient Management</h3>
-                <p>Organize and manage all feed ingredients بسهولة.</p>
-            </div>
-
-            <div class="card">
-                <h3>Nutrient Analysis</h3>
-                <p>Compare required vs achieved nutritional values instantly.</p>
-            </div>
-
-            <div class="card">
-                <h3>Cost Optimization</h3>
-                <p>Calculate and reduce feed cost باستخدام Solver.</p>
-            </div>
-
-            <div class="card">
-                <h3>Fast Formulation</h3>
-                <p>Create feed formulas بسرعة وكفاءة عالية.</p>
-            </div>
-
+            <p class="download-note">Free Trial Available • Windows 10/11 • v1.0</p>
         </div>
     </div>
-</div>
 
-<div class="section">
-    <div class="container">
-        <h2>Demo Video</h2>
-        <p style="text-align:center;">(Add your video here later)</p>
+    <div class="section">
+        <div class="container">
+            <h2>What is FeedBase?</h2>
+            <p class="lead">
+                FeedBase helps nutritionists, feed engineers, and farm managers create optimized feed formulas,
+                manage ingredients, calculate feed cost, and analyze nutrients in one powerful and practical system.
+            </p>
+        </div>
     </div>
-</div>
 
-<div class="footer">
-    <p>Developed by Eng. Aboulela</p>
-</div>
+    <div class="section">
+        <div class="container">
+            <h2>Key Features</h2>
+
+            <div class="features">
+                <div class="card">
+                    <h3>Ingredient Management</h3>
+                    <p>Organize raw materials, control inclusion limits, and manage ingredient prices with clarity and flexibility.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Nutrient Analysis</h3>
+                    <p>Compare actual versus standard nutrient values instantly and monitor formulation quality in real time.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Cost Optimization</h3>
+                    <p>Reduce feed cost using solver-based optimization while keeping your nutritional targets under control.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Fast Formulation</h3>
+                    <p>Create feed formulas quickly with a simple interface designed for practical daily use.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen-section">
+        <div class="container">
+            <h2>Main Interface</h2>
+            <p>
+                FeedBase provides a clear interface to select poultry type, feed type, feed days, and solver mode,
+                while giving full visibility over ingredient data and nutritional analysis.
+            </p>
+
+            <img src="images/main-screen.png" alt="FeedBase Main Interface" class="screen-image">
+        </div>
+    </div>
+
+    <div class="screen-section">
+        <div class="container">
+            <h2>Advanced Analysis & Solver</h2>
+            <p>
+                Monitor nutrient targets, compare actual values against standards, and optimize the formula using the built-in solver engine
+                to achieve better performance at lower cost.
+            </p>
+
+            <img src="images/solver-screen.png" alt="FeedBase Solver Screen" class="screen-image">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2>Demo Video</h2>
+            <p class="lead">
+                A short video tutorial will be added here to show how to install FeedBase,
+                create a formula, and use the solver step by step.
+            </p>
+
+            <div class="video-box">
+                <p>Video section coming soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2>Start Using FeedBase Today</h2>
+            <p>
+                Download the current version and start building optimized feed formulas with speed, clarity, and better cost control.
+            </p>
+
+            <a class="btn" href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0/FeedBase_Setup.exe" target="_blank">
+                Download FeedBase
+            </a>
+
+            <p class="download-note">If Windows shows a warning, click “More info” then “Run anyway”.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Developed by Eng. Aboulela</p>
+    </div>
 
 </body>
 </html>
