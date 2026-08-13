@@ -331,14 +331,28 @@
             align-items: stretch;
         }
 
-        .plan-card {
-            background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            box-shadow: var(--shadow);
-            padding: 30px 26px;
-            position: relative;
-        }
+       .plan-card {
+    background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 30px 26px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    flex-grow: 1;
+}
+
+.plan-btn {
+    margin-top: auto;
+}
 
         .plan-card.best {
             border: 1px solid rgba(34,197,94,0.45);
