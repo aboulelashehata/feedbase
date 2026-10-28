@@ -1,0 +1,24 @@
+
+.nav-inner{flex-wrap:wrap}
+.language-switcher{position:relative;flex-shrink:0;color:#f8fafc;font-size:15px}
+.language-switcher summary{cursor:pointer;padding:9px 13px;border:1px solid #64748b;border-radius:10px;background:#0f172a}
+.language-switcher summary:focus-visible,.language-switcher a:focus-visible{outline:3px solid #22c55e;outline-offset:3px}
+.language-switcher nav{position:absolute;inset-inline-end:0;top:100%;margin-top:8px;min-width:180px;padding:8px;background:#0f172a;border:1px solid #64748b;border-radius:12px;box-shadow:0 12px 30px #0008;z-index:1100}
+.language-switcher nav a{display:block;color:#f8fafc;text-decoration:none;padding:9px 12px;border-radius:6px}
+.language-switcher nav a:hover,.language-switcher nav a[aria-current]{background:#23324a;color:#86efac}
+.locale-note{text-align:center;color:#94a3b8;font-size:15px;margin:18px auto;max-width:850px}
+[dir="rtl"] .steps-box ol,[dir="rtl"] .article ul{padding-left:0;padding-inline-start:24px}
+[dir="rtl"] .plan-badge{right:auto;inset-inline-end:20px}
+[dir="rtl"] .sib-form-message-panel{text-align:right!important}
+[dir="rtl"] .plan-price{direction:ltr;unicode-bidi:isolate;text-align:right}
+[lang="ur"] body{line-height:1.9;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
+[lang="ar"] body{font-family:Calibri,"Segoe UI",Tahoma,Arial,sans-serif}
+[lang="ar"] input,[lang="ar"] button,[lang="ar"] .sib-form-message-panel{font-family:Calibri,"Segoe UI",Tahoma,Arial,sans-serif!important}
+.nav-links{min-width:0;justify-content:flex-start}
+.nav-links a{overflow-wrap:anywhere}
+@media(max-width:900px){.nav-links{gap:12px}.language-switcher{align-self:flex-start}.language-switcher nav{inset-inline-start:0;inset-inline-end:auto}}
+
+@media(max-width:600px){.nav-inner{flex-direction:row;align-items:center;gap:12px}.nav-links{width:100%;gap:10px 14px}.language-switcher{margin-inline-start:auto;align-self:center}.language-switcher nav{inset-inline-start:auto;inset-inline-end:0}}
+
+[lang="ur"] h1,[lang="ur"] h2,[lang="ur"] h3{line-height:1.65}
+.pricing-grid{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}

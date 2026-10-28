@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CQMPWBEYW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1CQMPWBEYW');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBase | Software inteligente de formulação de rações e otimização de custos</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #081225;
+            --bg2: #0f172a;
+            --card: #1e293b;
+            --card2: #23324a;
+            --text: #f8fafc;
+            --muted: #cbd5e1;
+            --soft: #94a3b8;
+            --accent: #22c55e;
+            --accent-dark: #16a34a;
+            --border: rgba(255,255,255,0.08);
+            --shadow: 0 12px 30px rgba(0,0,0,0.28);
+            --warn: #f59e0b;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #081225 0%, #0b1730 40%, #081225 100%);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            background: rgba(8, 18, 37, 0.78);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-btn {
+            background: var(--accent);
+            color: #08111f !important;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 95px 20px 70px;
+        }
+
+        .hero h1 {
+            font-size: 68px;
+            margin: 0 0 14px;
+            line-height: 1.05;
+        }
+
+        .hero .subtitle {
+            font-size: 26px;
+            color: #e2e8f0;
+            margin-bottom: 12px;
+        }
+
+        .hero .highlight {
+            margin: 8px auto 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 22px;
+            max-width: 900px;
+        }
+
+        .hero .hero-text {
+            max-width: 850px;
+            margin: 22px auto 0;
+            color: var(--muted);
+            font-size: 19px;
+        }
+
+        .hero-actions {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--accent);
+            color: #08111f;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.2s ease;
+            box-shadow: 0 8px 22px rgba(34,197,94,0.28);
+        }
+
+        .btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 18px 30px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            border: 1px solid var(--border);
+            transition: 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.04);
+            transform: translateY(-2px);
+        }
+
+        .download-note {
+            margin-top: 14px;
+            color: var(--soft);
+            font-size: 17px;
+        }
+
+        .hero-stat-row {
+            margin-top: 36px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 18px;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(30,41,59,0.7);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-card h3 {
+            margin: 0;
+            color: var(--accent);
+            font-size: 30px;
+        }
+
+        .stat-card p {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .section {
+            padding: 55px 20px;
+        }
+
+        .section-alt {
+            background: rgba(255,255,255,0.015);
+            border-top: 1px solid rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .section h2 {
+            text-align: center;
+            margin: 0 0 18px;
+            font-size: 44px;
+        }
+
+        .section p.lead {
+            text-align: center;
+            max-width: 920px;
+            margin: 0 auto 32px;
+            color: var(--muted);
+            font-size: 19px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+            padding: 26px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .workflow-section {
+            padding: 60px 20px 70px;
+        }
+
+        .workflow-section h2 {
+            text-align: center;
+            font-size: 50px;
+            margin: 0 0 16px;
+        }
+
+        .workflow-section .lead {
+            text-align: center;
+            max-width: 980px;
+            margin: 0 auto 38px;
+            color: var(--muted);
+            font-size: 19px;
+        }
+
+        .demo {
+            margin-top: 56px;
+            text-align: center;
+        }
+
+        .demo img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 18px;
+            margin-bottom: 22px;
+            border: 2px solid #1f2937;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #0b1324;
+        }
+
+        .demo-text {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .demo-text h3 {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-size: 30px;
+        }
+
+        .demo-text p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+            align-items: stretch;
+        }
+
+       .plan-card {
+    background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 30px 26px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    flex-grow: 1;
+}
+
+.plan-btn {
+    margin-top: auto;
+}
+
+        .plan-card.best {
+            border: 1px solid rgba(34,197,94,0.45);
+            box-shadow: 0 14px 34px rgba(34,197,94,0.14);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--accent);
+            color: #08111f;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .plan-card h3 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .plan-price {
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1;
+            margin: 12px 0 10px;
+            color: white;
+        }
+
+        .plan-price span {
+            font-size: 18px;
+            font-weight: normal;
+            color: var(--muted);
+        }
+
+        .plan-desc {
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .plan-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+        }
+
+        .plan-list li {
+            color: var(--muted);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 16px;
+        }
+
+        .plan-list li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 16px 24px;
+            background: var(--accent);
+            color: #08111f;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.2s ease;
+            box-shadow: 0 8px 22px rgba(34,197,94,0.28);
+        }
+
+        .plan-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .pricing-note {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--soft);
+            font-size: 17px;
+        }
+
+        .steps-box {
+            background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            padding: 34px 28px;
+            max-width: 920px;
+            margin: 34px auto 0;
+            box-shadow: var(--shadow);
+        }
+
+        .steps-box h3 {
+            margin: 0 0 14px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+        }
+
+        .steps-box ol {
+            margin: 0;
+            padding-left: 24px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .steps-box li {
+            margin-bottom: 10px;
+        }
+
+        .steps-box strong {
+            color: white;
+        }
+
+        .email-help {
+            text-align: center;
+            margin-top: 18px;
+            color: #9ca3af;
+            font-size: 17px;
+        }
+
+        .email-action {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .email-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #22c55e;
+            color: #08111f;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 6px 16px rgba(34,197,94,0.3);
+            transition: 0.2s ease;
+        }
+
+        .email-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .warning-box {
+            margin-top: 20px;
+            text-align: center;
+            color: #fde68a;
+            font-size: 16px;
+        }
+
+        .video-box {
+            background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            max-width: 920px;
+            margin: 28px auto 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .video-box iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: 0;
+            border-radius: 14px;
+        }
+
+        .video-action {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .video-download-btn {
+            background: #0B8461;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.2s ease;
+        }
+
+        .video-download-btn:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 70px 20px 80px;
+        }
+
+        .cta-box {
+            max-width: 980px;
+            margin: auto;
+            background: linear-gradient(180deg, rgba(30,41,59,0.75), rgba(35,50,74,0.75));
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 55px 28px;
+        }
+
+        .cta-section h2 {
+            font-size: 52px;
+            margin: 0 0 16px;
+        }
+
+        .cta-section p {
+            max-width: 760px;
+            margin: 0 auto 12px;
+            color: var(--muted);
+            font-size: 21px;
+        }
+
+.blog-light-section {
+    background: linear-gradient(180deg, #081225 0%, #0b1730 100%);
+    color: var(--text);
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.blog-light-section h2 {
+    color: #ffffff;
+    font-size: 56px;
+}
+
+.blog-light-section .lead {
+    color: var(--muted);
+    font-size: 22px;
+}
+
+.blog-light-card {
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 26px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+#soro-blog {
+    padding-top: 20px;
+}
+
+        .updates-section {
+            background: rgba(255,255,255,0.015);
+            border-top: 1px solid rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .updates-card {
+            max-width: 640px;
+            margin: 36px auto 0;
+            background: linear-gradient(180deg, rgba(30,41,59,0.95), rgba(35,50,74,0.95));
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .updates-form {
+            margin: 0;
+        }
+
+        .updates-input {
+            width: 100%;
+            padding: 17px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: #0f172a;
+            color: white;
+            font-size: 17px;
+            outline: none;
+        }
+
+        .updates-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .updates-input:focus {
+            border-color: rgba(34,197,94,0.7);
+            box-shadow: 0 0 0 4px rgba(34,197,94,0.12);
+        }
+
+        .updates-button {
+            width: 100%;
+            margin-top: 16px;
+            padding: 17px 22px;
+            background: var(--accent);
+            color: #08111f;
+            border: 0;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(34,197,94,0.28);
+            transition: 0.2s ease;
+        }
+
+        .updates-button:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .updates-note {
+            margin-top: 14px;
+            color: var(--soft);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .sib-form {
+            padding: 0 !important;
+        }
+
+        .sib-form-container,
+        #sib-container {
+            background: transparent !important;
+            border: 0 !important;
+            padding: 0 !important;
+            max-width: none !important;
+        }
+
+        .sib-form-message-panel {
+            max-width: 640px !important;
+            margin: 0 auto 18px !important;
+            border-radius: 12px !important;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 26px 20px 40px;
+            color: var(--soft);
+            font-size: 15px;
+        }
+
+        .footer p {
+            margin: 8px 0;
+        }
+
+        .footer-link {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 900px) {
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero .subtitle {
+                font-size: 22px;
+            }
+
+            .hero .highlight {
+                font-size: 20px;
+            }
+
+            .hero-stat-row {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow-section h2,
+            .section h2,
+            .cta-section h2 {
+                font-size: 36px;
+            }
+
+            .blog-light-section h2 {
+                font-size: 42px;
+            }
+
+            .plan-price {
+                font-size: 38px;
+            }
+
+            .video-box iframe {
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .hero {
+                padding-top: 72px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero .highlight,
+            .hero .hero-text,
+            .section p.lead,
+            .workflow-section .lead,
+            .demo-text p,
+            .cta-section p,
+            .steps-box ol,
+            .email-help {
+                font-size: 17px;
+            }
+
+            .blog-light-section {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .blog-light-section .lead {
+                font-size: 18px;
+            }
+
+            .blog-light-card {
+                padding: 20px;
+                border-radius: 18px;
+            }
+
+            .demo-text h3 {
+                font-size: 24px;
+            }
+
+            .btn,
+            .btn-secondary,
+            .plan-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .video-box iframe {
+                height: 260px;
+            }
+        }
+    </style>
+<!-- localization:head -->
+<meta name="description" content="O FeedBase ajuda nutricionistas, engenheiros de alimentação animal e gestores de fazendas a otimizar fórmulas, gerenciar ingredientes, controlar metas nutricionais e restaurar soluções anteriores em um sistema completo.">
+<link rel="canonical" href="https://www.feedbasepro.com/index.pt.html">
+<link rel="alternate" hreflang="en" href="https://www.feedbasepro.com/">
+<link rel="alternate" hreflang="ar" href="https://www.feedbasepro.com/index.ar.html">
+<link rel="alternate" hreflang="fr" href="https://www.feedbasepro.com/index.fr.html">
+<link rel="alternate" hreflang="ur" href="https://www.feedbasepro.com/index.ur.html">
+<link rel="alternate" hreflang="es" href="https://www.feedbasepro.com/index.es.html">
+<link rel="alternate" hreflang="pt" href="https://www.feedbasepro.com/index.pt.html">
+<link rel="alternate" hreflang="x-default" href="https://www.feedbasepro.com/">
+<link rel="stylesheet" href="locales/languages.css">
+<!-- /localization -->
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="brand">FeedBase</a>
+<!-- localization:menu -->
+<details class="language-switcher"><summary>Idioma: <span lang="pt" dir="auto">Português</span></summary><nav aria-label="Idioma"><a href="index.html" lang="en" hreflang="en" dir="auto">English</a><a href="index.ar.html" lang="ar" hreflang="ar" dir="auto">العربية</a><a href="index.fr.html" lang="fr" hreflang="fr" dir="auto">Français</a><a href="index.ur.html" lang="ur" hreflang="ur" dir="auto">اردو</a><a href="index.es.html" lang="es" hreflang="es" dir="auto">Español</a><a href="index.pt.html" lang="pt" hreflang="pt" dir="auto" aria-current="page">Português</a></nav></details>
+<!-- /localization -->
+<div class="nav-links">
+                <a href="#about" data-i18n="0">Sobre</a>
+                <a href="#features" data-i18n="1">Recursos</a>
+                <a href="#workflow" data-i18n="2">Etapas</a>
+                <a href="#pricing" data-i18n="3">Preços</a>
+                <a href="#video" data-i18n="4">Demonstração</a>
+                <a href="#updates" data-i18n="5">Novidades</a>
+                <a href="#blog" data-i18n="6">Blog</a>
+                <a href="feed-formulation-software.pt.html" class="footer-link" data-i18n="7">Guia de formulação</a>
+                <a href="#download" class="nav-btn" data-i18n="8">Teste grátis</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <h1>FeedBase</h1>
+            <p class="subtitle" data-i18n="9">Software inteligente de formulação de rações e otimização de custos</p>
+            <p class="highlight" data-i18n="10">Reduza os custos. Melhore a precisão. Economize tempo.</p>
+            <p class="hero-text" data-i18n="11">O FeedBase ajuda nutricionistas, engenheiros de alimentação animal e gestores de fazendas a otimizar fórmulas, gerenciar ingredientes, controlar metas nutricionais e restaurar soluções anteriores em um sistema completo.</p>
+
+            <div class="hero-actions">
+                <a class="btn"
+                   href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0.4/FeedBase_Setup.exe"
+                   target="_blank"
+                   onclick="gtag('event','trial_download_click',{
+                       event_category:'engagement',
+                       event_label:'Start Free Trial - Hero',
+                       file_name:'FeedBase_Setup.exe',
+                       version:'v1.0'
+                   });" data-i18n="8">Teste grátis</a>
+
+                <a class="btn-secondary"
+                   href="#pricing"
+                   onclick="gtag('event','go_to_pricing_click',{
+                       event_category:'navigation',
+                       event_label:'Buy License - Hero'
+                   });" data-i18n="12">Comprar licença</a>
+            </div>
+
+            <p class="download-note" data-i18n="13">Teste grátis disponível • Windows 10/11 • v1.0.4</p>
+
+            <div class="hero-stat-row">
+                <div class="stat-card">
+                    <h3 data-i18n="14">Rápido</h3>
+                    <p data-i18n="15">Crie e otimize fórmulas de rações com um processo prático.</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 data-i18n="16">Preciso</h3>
+                    <p data-i18n="17">Compare instantaneamente os valores nutricionais reais com os padrões desejados.</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 data-i18n="18">Prático</h3>
+                    <p data-i18n="19">Salve, compare e restaure soluções anteriores quando precisar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="container">
+            <h2 data-i18n="20">O que é o FeedBase?</h2>
+            <p class="lead" data-i18n="21">O FeedBase é uma plataforma completa de formulação de rações que reúne gerenciamento de ingredientes, especificações nutricionais, otimização de custos com um solucionador, histórico de relatórios e restauração de fórmulas em um aplicativo profissional para computador.</p>
+        </div>
+    </div>
+
+    <div class="section section-alt">
+        <div class="container">
+            <h2 data-i18n="22">Por que o FeedBase?</h2>
+
+            <div class="features">
+                <div class="card">
+                    <h3 data-i18n="23">💰 Reduza os custos</h3>
+                    <p data-i18n="24">Minimize o custo da ração com otimização inteligente e restrições claras para os ingredientes.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="25">⚡ Economize tempo</h3>
+                    <p data-i18n="26">Substitua os cálculos manuais e a tentativa e erro por um processo de formulação estruturado.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="27">📊 Resultados precisos</h3>
+                    <p data-i18n="28">Monitore os padrões e os valores reais para manter cada fórmula alinhada às metas nutricionais.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="29">🗂 Histórico de fórmulas</h3>
+                    <p data-i18n="30">Consulte soluções anteriores, compare relatórios e restaure qualquer fórmula com um clique.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="features">
+        <div class="container">
+            <h2 data-i18n="31">Principais recursos</h2>
+
+            <div class="features">
+                <div class="card">
+                    <h3 data-i18n="32">Gerenciamento de ingredientes</h3>
+                    <p data-i18n="33">Organize as matérias-primas, gerencie os preços e mantenha sua base de ingredientes atualizada e pronta para a formulação.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="34">Análise nutricional</h3>
+                    <p data-i18n="35">Compare instantaneamente os valores reais com as metas e monitore a precisão da fórmula em tempo real.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="36">Otimização de custos</h3>
+                    <p data-i18n="37">Use o solucionador integrado para reduzir o custo da ração, mantendo os padrões nutricionais e a qualidade da fórmula.</p>
+                </div>
+
+                <div class="card">
+                    <h3 data-i18n="38">Histórico de fórmulas</h3>
+                    <p data-i18n="39">Salve, compare e restaure fórmulas anteriores para trabalhar mais rápido e tomar melhores decisões de produção.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="workflow-section section-alt" id="workflow">
+        <div class="container">
+            <h2 data-i18n="40">Processo completo de formulação</h2>
+            <p class="lead" data-i18n="41">O FeedBase abrange todo o processo: escolha do programa alimentar e dos ingredientes, otimização, metas nutricionais, histórico de relatórios e restauração de fórmulas.</p>
+
+            <div class="demo">
+                <img src="images/main-screen.png" alt="Main Formulation Screen">
+                <div class="demo-text">
+                    <h3 data-i18n="42">Tela principal de formulação</h3>
+                    <p data-i18n="43">A interface principal permite selecionar o tipo de ave, tipo de ração, dias de alimentação e modo do solucionador, enquanto acompanha ingredientes, preços, limites, padrões nutricionais e custo total em um só lugar.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/solver-screen.png" alt="Optimization Solver">
+                <div class="demo-text">
+                    <h3 data-i18n="44">Solucionador de otimização</h3>
+                    <p data-i18n="45">Execute uma otimização avançada para obter a fórmula de menor custo, atendendo automaticamente às necessidades nutricionais com eficiência.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-feedmap.png" alt="Feed Program Mapping">
+                <div class="demo-text">
+                    <h3 data-i18n="46">Configuração dos programas alimentares</h3>
+                    <p data-i18n="47">Defina programas para diferentes espécies e fases de produção e alterne facilmente entre inicial, crescimento, terminação e outros planos.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-ingredients.png" alt="Ingredient Database">
+                <div class="demo-text">
+                    <h3 data-i18n="48">Banco de dados de ingredientes</h3>
+                    <p data-i18n="49">Mantenha uma base completa com valores nutricionais, preços e detalhes das matérias-primas necessários para uma formulação precisa.</p>
+                </div>
+            </div>
+
+           
+            <div class="demo">
+                <img src="images/tables-solverreports.png" alt="Solver Reports Archive">
+                <div class="demo-text">
+                    <h3 data-i18n="50">Arquivo de relatórios do solucionador</h3>
+                    <p data-i18n="51">Salve resultados e consulte otimizações anteriores, incluindo custo, status, tempo e dados das fórmulas salvas para uso posterior.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/tables-specs.png" alt="Nutrient Specifications">
+                <div class="demo-text">
+                    <h3 data-i18n="52">Especificações nutricionais</h3>
+                    <p data-i18n="53">Defina os valores desejados para cada espécie e fase para avaliar cada fórmula conforme os padrões nutricionais corretos.</p>
+                </div>
+            </div>
+
+           </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2 data-i18n="54">Exportação e relatórios</h2>
+
+            <div class="demo">
+                <img src="images/report-excel.png" alt="Relatórios do Excel">
+                <div class="demo-text">
+                    <h3 data-i18n="55">Relatórios do Excel</h3>
+                    <p data-i18n="56">Exporte análises detalhadas das fórmulas para o Excel para processamento, documentação e uso nas operações diárias.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/report-pdf.png" alt="Professional PDF Reports">
+                <div class="demo-text">
+                    <h3 data-i18n="57">Relatórios PDF profissionais</h3>
+                    <p data-i18n="58">Gere relatórios PDF claros e profissionais, prontos para imprimir, compartilhar com clientes e arquivar.</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <img src="images/report-comparison.png" alt="Relatórios comparativos">
+                <div class="demo-text">
+                    <h3 data-i18n="59">Relatórios comparativos</h3>
+                    <p data-i18n="60">Compare vários relatórios e analise as diferenças entre fórmulas para tomar melhores decisões.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-alt" id="pricing">
+        <div class="container">
+            <h2 data-i18n="3">Preços</h2>
+            <p class="lead" data-i18n="61">Comece com um teste grátis e escolha o plano adequado para sua atividade. Há licenças mensais, trimestrais e anuais com pagamento seguro pelo PayPal.</p>
+
+            <div class="pricing-grid">
+                <div class="plan-card">
+                    <h3 data-i18n="62">Plano mensal</h3>
+                    <div class="plan-price">$19 <span data-i18n="63">/ mês</span></div>
+                    <p class="plan-desc" data-i18n="64">Acesso mensal flexível para nutricionistas, consultores e pequenas operações.</p>
+
+                    <ul class="plan-list">
+                        <li data-i18n="65">Acesso completo ao FeedBase para computador</li>
+                        <li data-i18n="66">Gerenciamento de ingredientes</li>
+                        <li data-i18n="67">Otimização com o solucionador</li>
+                        <li data-i18n="68">Salvar e restaurar fórmulas</li>
+                        <li data-i18n="69">Exportar relatórios PDF e Excel</li>
+                    </ul>
+
+                    <a class="plan-btn"
+                       href="https://www.paypal.com/ncp/payment/DN4T29YTEQ4N4"
+                       target="_blank"
+                       onclick="gtag('event','purchase_click',{
+                           event_category:'engagement',
+                           event_label:'Buy Monthly License',
+                           plan:'monthly',
+                           value:19,
+                           currency:'USD'
+                       });" data-i18n="70">Comprar 1 mês</a>
+                </div>
+
+                <div class="plan-card best">
+                    <div class="plan-badge" data-i18n="71">Mais popular</div>
+                    <h3 data-i18n="72">Plano de 3 meses</h3>
+                    <div class="plan-price">$49 <span data-i18n="73">/ 3 meses</span></div>
+                    <p class="plan-desc" data-i18n="74">Uma opção prática de médio prazo, com menor custo mensal e sem compromisso longo.</p>
+
+                    <ul class="plan-list">
+                        <li data-i18n="75">Tudo do plano mensal</li>
+                        <li data-i18n="76">Economize US$ 8 em relação a 3 pagamentos mensais</li>
+                        <li data-i18n="77">Acesso completo por 3 meses</li>
+                        <li data-i18n="78">Processo profissional de criação de relatórios</li>
+                        <li data-i18n="79">Ideal para usuários frequentes</li>
+                    </ul>
+
+                    <a class="plan-btn"
+                       href="https://www.paypal.com/ncp/payment/2W9ZBFTF24CMG"
+                       target="_blank"
+                       onclick="gtag('event','purchase_click',{
+                           event_category:'engagement',
+                           event_label:'Buy 3-Month License',
+                           plan:'3_month',
+                           value:49,
+                           currency:'USD'
+                       });" data-i18n="80">Comprar 3 meses</a>
+                </div>
+
+                <div class="plan-card best">
+                    <div class="plan-badge" data-i18n="81">Melhor custo-benefício</div>
+                    <h3 data-i18n="82">Plano anual</h3>
+                    <div class="plan-price">$129 <span data-i18n="83">/ ano</span></div>
+                    <p class="plan-desc" data-i18n="84">A melhor escolha para fazendas e profissionais que usam o FeedBase continuamente durante todo o ano.</p>
+
+                    <ul class="plan-list">
+                        <li data-i18n="75">Tudo do plano mensal</li>
+                        <li data-i18n="85">Economize US$ 99 em relação a 12 pagamentos mensais</li>
+                        <li data-i18n="86">Apenas US$ 10,75 por mês</li>
+                        <li data-i18n="87">Acesso completo e contínuo</li>
+                        <li data-i18n="88">A melhor opção a longo prazo</li>
+                    </ul>
+
+                    <a class="plan-btn"
+                       href="https://www.paypal.com/ncp/payment/2BVJQCCTWYHCC"
+                       target="_blank"
+                       onclick="gtag('event','purchase_click',{
+                           event_category:'engagement',
+                           event_label:'Buy Yearly License',
+                           plan:'yearly',
+                           value:129,
+                           currency:'USD'
+                       });" data-i18n="89">Comprar 1 ano</a>
+                </div>
+            </div>
+
+            <p class="pricing-note" data-i18n="90">Pagamento seguro pelo PayPal, cartão de débito ou cartão de crédito.</p>
+
+            <div class="steps-box">
+                <h3 data-i18n="91">Como ativar sua licença</h3>
+                <ol>
+                    <li data-i18n="92">Baixe e instale o FeedBase</li>
+                    <li data-i18n="93">Abra a janela de licença no programa</li>
+                    <li data-i18n="94">Copie seu identificador de hardware (Hardware ID)</li>
+                    <li data-i18n="95">Compre uma licença mensal, trimestral ou anual usando um dos botões acima</li>
+                    <li data-i18n="96">Envie seu identificador de hardware e o e-mail usado no pagamento para info@feedbasepro.com</li>
+                    <li data-i18n="97">Você receberá sua chave de ativação por e-mail</li>
+                    <li data-i18n="98">Cole a chave no FeedBase e clique em Ativar (Activate)</li>
+                </ol>
+
+                <p class="email-help" data-i18n="99">Após o pagamento, envie seu identificador de hardware para receber sua chave de ativação imediatamente.</p>
+
+                <div class="email-action">
+                    <a class="email-btn"
+                       href="mailto:info@feedbasepro.com?subject=FeedBase License Request&body=Hello,%0D%0AI have purchased FeedBase.%0D%0AHere is my Hardware ID:%0D%0A"
+                       onclick="gtag('event','email_click',{
+                           event_category:'engagement',
+                           event_label:'Send Hardware ID Email'
+                       });" data-i18n="100">Enviar identificador de hardware e comprovante de pagamento</a>
+                </div>
+
+                <div class="warning-box" data-i18n="101">As chaves de ativação são geradas para um único dispositivo com base no identificador de hardware.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="video">
+        <div class="container">
+            <h2 data-i18n="102">Vídeo de demonstração</h2>
+            <p class="lead" data-i18n="103">Veja como o FeedBase funciona, da escolha dos ingredientes à criação de uma fórmula otimizada em segundos.</p>
+
+            <!-- localization:media-note --><p class="locale-note">As capturas de tela e o vídeo mostram o software em seu idioma original.</p><!-- /localization -->
+<div class="video-box">
+               <iframe
+                    src="https://www.youtube.com/embed/nToiMbqAU4s"
+                    title="Demo Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="video-action">
+                <a class="video-download-btn"
+                   href="#download"
+                   onclick="gtag('event','download_section_click',{
+                       event_category:'engagement',
+                       event_label:'Download FeedBase From Video Section'
+                   });" data-i18n="104">Baixar FeedBase</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section" id="download">
+        <div class="container">
+            <div class="cta-box">
+                <h2 data-i18n="105">Comece a usar o FeedBase hoje</h2>
+                <p data-i18n="106">Baixe a versão atual e crie fórmulas otimizadas com mais rapidez, visibilidade e controle de custos.</p>
+
+                <div class="hero-actions">
+                    <a class="btn"
+                       href="https://github.com/aboulelashehata/feedbase/releases/download/v1.0.4/FeedBase_Setup.exe"
+                       target="_blank"
+                       onclick="gtag('event','trial_download_click',{
+                           event_category:'engagement',
+                           event_label:'Start Free Trial - Bottom',
+                           file_name:'FeedBase_Setup.exe',
+                           version:'v1.0'
+                       });" data-i18n="8">Teste grátis</a>
+
+                    <a class="btn-secondary"
+                       href="#pricing"
+                       onclick="gtag('event','go_to_pricing_click',{
+                           event_category:'navigation',
+                           event_label:'Buy License - Bottom'
+                       });" data-i18n="12">Comprar licença</a>
+                </div>
+
+                <p class="download-note" data-i18n="107">Se o Windows exibir um aviso, clique em “Mais informações” (More info) e depois em “Executar assim mesmo” (Run anyway).</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Updates / Email Signup Section -->
+    <div class="section updates-section" id="updates">
+        <div class="container">
+            <h2 data-i18n="108">Acompanhe as novidades do FeedBase</h2>
+            <p class="lead" data-i18n="109">Receba por e-mail atualizações, novas versões, anúncios de recursos e informações de download do FeedBase.</p>
+
+            <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel" style="font-family:Arial, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949;">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <span class="sib-form-message-panel__inner-text" data-i18n="110">Não foi possível salvar sua inscrição. Tente novamente.</span>
+                    </div>
+                </div>
+
+                <div id="success-message" class="sib-form-message-panel" style="font-family:Arial, sans-serif; font-size:16px; text-align:left; color:#085229; background-color:#e7faf0; border-color:#13ce66;">
+                    <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <span class="sib-form-message-panel__inner-text" data-i18n="111">Sua inscrição foi concluída com sucesso.</span>
+                    </div>
+                </div>
+
+                <div class="updates-card">
+                    <form id="sib-form"
+                          class="updates-form"
+                          method="POST"
+                          action="https://6e7d230e.sibforms.com/serve/MUIFACL_py8XH-vQoLGzEi2LdWPYAJSfFSPxgsqisRqVvJcap8njNiGNFeZtRk5Y_PxUfEKCzbNOn3xr5f1B35BjadqEk3bOK4Cofp4Ngho_PaOKgzQY5fkAT7dkouSATVeRgtxF_e5xQNMSzunAljaeuAuigDL0Th6KhbSP_ggyKLAKad7qgHUGde6bF1Eil37XESZHyczW8vK3HA=="
+                          data-type="subscription">
+
+                        <input class="updates-input"
+                               type="email"
+                               id="EMAIL"
+                               name="EMAIL"
+                               autocomplete="email"
+                               placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" dir="ltr"
+                               data-required="true"
+                               required>
+
+                        <button class="updates-button"
+                                form="sib-form"
+                                type="submit"
+                                onclick="gtag('event','email_signup_click',{
+                                    event_category:'engagement',
+                                    event_label:'Join FeedBase Updates'
+                                });" data-i18n="112">Inscrever-se nas novidades do FeedBase</button>
+
+                        <p class="updates-note" data-i18n="113">Sem spam. Apenas atualizações, versões e informações importantes sobre o FeedBase.</p>
+
+                        <input type="text" name="email_address_check" value="" class="input--hidden">
+                        <input type="hidden" name="locale" value="pt">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="section blog-light-section" id="blog">
+        <div class="container">
+            <h2 data-i18n="114">Artigos recentes</h2>
+            <p class="lead" data-i18n="115">Saiba mais sobre formulação de rações, estratégias nutricionais e otimização de custos.</p>
+
+            <div class="blog-light-card">
+                <!-- localization:blog-note --><p class="locale-note">Os artigos são publicados em seu idioma original.</p><!-- /localization -->
+<div id="soro-blog" lang="en" dir="ltr"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://app.trysoro.com/api/embed/089e61d5-463f-489b-af44-2fc101c3a23f" defer></script>
+
+    <div class="footer">
+        <p>FeedBase © 2026</p>
+        <p data-i18n="116">Desenvolvido pelo engenheiro Aboulela</p>
+        <p>
+            <a href="feed-formulation-software.pt.html" style="color:#cbd5e1; text-decoration:none;" data-i18n="7">Guia de formulação</a>
+        </p>
+    </div>
+
+
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'pt';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Digite um endereço de e-mail válido.";
+        window.REQUIRED_ERROR_MESSAGE = "Este campo não pode ficar vazio.";
+        window.GENERIC_INVALID_MESSAGE = "Digite um endereço de e-mail válido.";
+        window.INVALID_NUMBER = "Digite um endereço de e-mail válido.";
+        window.INVALID_DATE = "Please enter a valid date";
+        window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected',
+                selectedOption: '{quantity} selected',
+                selectedOptions: '{quantity} selected'
+            }
+        };
+
+        var AUTOHIDE = Boolean(1);
+    </script>
+
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trackedSections = [
+                { id: "features", eventName: "features_section_view" },
+                { id: "pricing", eventName: "pricing_section_view" },
+                { id: "video", eventName: "video_section_view" },
+                { id: "download", eventName: "download_section_view" },
+                { id: "updates", eventName: "updates_section_view" },
+                { id: "blog", eventName: "blog_section_view" }
+            ];
+
+            const sentSections = new Set();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        const section = trackedSections.find(x => x.id === sectionId);
+
+                        if (section && !sentSections.has(sectionId)) {
+                            gtag('event', section.eventName, {
+                                event_category: 'engagement',
+                                event_label: sectionId
+                            });
+                            sentSections.add(sectionId);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.45
+            });
+
+            trackedSections.forEach((section) => {
+                const el = document.getElementById(section.id);
+                if (el) observer.observe(el);
+            });
+
+            setTimeout(function () {
+                gtag('event', 'engaged_30_seconds', {
+                    event_category: 'engagement',
+                    event_label: 'User stayed 30 seconds'
+                });
+            }, 30000);
+
+            let scroll75Sent = false;
+
+            window.addEventListener('scroll', function () {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+                if (docHeight > 0) {
+                    const percent = (scrollTop / docHeight) * 100;
+
+                    if (percent >= 75 && !scroll75Sent) {
+                        gtag('event', 'scroll_75', {
+                            event_category: 'engagement',
+                            event_label: 'Scrolled 75 percent'
+                        });
+                        scroll75Sent = true;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
