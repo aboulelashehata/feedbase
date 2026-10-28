@@ -12,7 +12,8 @@
 [dir="rtl"] .sib-form-message-panel{text-align:right!important}
 [dir="rtl"] .plan-price{direction:ltr;unicode-bidi:isolate;text-align:right}
 [lang="ur"] body{line-height:1.9;font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
-[lang="ar"] body{font-family:Tahoma,Arial,sans-serif}
+[lang="ar"] body{font-family:Calibri,"Segoe UI",Tahoma,Arial,sans-serif}
+[lang="ar"] input,[lang="ar"] button,[lang="ar"] .sib-form-message-panel{font-family:Calibri,"Segoe UI",Tahoma,Arial,sans-serif!important}
 .nav-links{min-width:0;justify-content:flex-start}
 .nav-links a{overflow-wrap:anywhere}
 @media(max-width:900px){.nav-links{gap:12px}.language-switcher{align-self:flex-start}.language-switcher nav{inset-inline-start:0;inset-inline-end:auto}}
