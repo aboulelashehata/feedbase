@@ -22,3 +22,15 @@
 
 [lang="ur"] h1,[lang="ur"] h2,[lang="ur"] h3{line-height:1.65}
 .pricing-grid{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+
+/* Lifetime license: permanent use with 12 months of updates and maintenance. */
+.lifetime-offer{margin-top:38px;padding:34px;border:1px solid #22c55e;border-radius:22px;background:linear-gradient(135deg,#12372f,#13233d);box-shadow:0 14px 34px #0003;scroll-margin-top:120px}
+.lifetime-kicker{color:#86efac;font-weight:700;margin:0 0 10px;font-size:18px}
+.lifetime-intro{color:#cbd5e1;max-width:950px;font-size:18px;margin:0 0 26px}
+.lifetime-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:36px;align-items:start}
+.lifetime-summary h3{font-size:32px;margin:0 0 12px}.lifetime-price{font-size:clamp(38px,6vw,56px);line-height:1.15;font-weight:700;color:#fff}
+.lifetime-payment{color:#86efac;margin:8px 0;font-size:19px}.lifetime-summary .plan-btn{max-width:430px}
+.lifetime-features{margin:0}.lifetime-terms{margin-top:26px;padding-top:20px;border-top:1px solid #ffffff26;color:#cbd5e1}
+.lifetime-terms h4{font-size:21px;color:#fff;margin:0 0 8px}.lifetime-terms p{margin:0;line-height:1.8}
+.lifetime-offer a:focus-visible{outline:3px solid white;outline-offset:4px}
+@media(max-width:700px){.lifetime-offer{padding:24px 18px}.lifetime-layout{grid-template-columns:1fr;gap:22px}.lifetime-summary h3{font-size:28px}.lifetime-intro{font-size:17px}}
