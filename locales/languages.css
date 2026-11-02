@@ -33,4 +33,4 @@
 .lifetime-features{margin:0}.lifetime-terms{margin-top:26px;padding-top:20px;border-top:1px solid #ffffff26;color:#cbd5e1}
 .lifetime-terms h4{font-size:21px;color:#fff;margin:0 0 8px}.lifetime-terms p{margin:0;line-height:1.8}
 .lifetime-offer a:focus-visible{outline:3px solid white;outline-offset:4px}
-@media(max-width:700px){.lifetime-offer{padding:24px 18px}.lifetime-layout{grid-template-columns:1fr;gap:22px}.lifetime-summary h3{font-size:28px}.lifetime-intro{font-size:17px}}
+@media(max-width:700px){.lifetime-offer{padding:24px 18px;scroll-margin-top:200px}.lifetime-layout{grid-template-columns:1fr;gap:22px}.lifetime-summary h3{font-size:28px}.lifetime-intro{font-size:17px}}
